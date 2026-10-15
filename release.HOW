@@ -1,0 +1,12 @@
+#!/bin/sh
+
+rm -rf build dist
+pipenv run python setup.py py2app
+
+rm -rf 'Structured Annotations for 2D-to-3D Modeling'
+mkdir 'Structured Annotations for 2D-to-3D Modeling'
+mv 'dist/Structured Annotations for 2D-to-3D Modeling.app' 'Structured Annotations for 2D-to-3D Modeling/'
+cp -R LICENSE README.md CREDITS 'Structured Annotations for 2D-to-3D Modeling/'
+git archive --format=tar --prefix=structured_annotations-source/ HEAD | tar -czf 'Structured Annotations for 2D-to-3D Modeling/structured_annotations-source.tar.gz'  --exclude 'structured_annotations-source/ext/adt/*' --exclude 'structured_annotations-source/ext/glAArg' --exclude 'structured_annotations-source/ext/sphere.c' --exclude '*/sessions/*' --exclude 'structured_annotations-source/scenes/*' --exclude 'distribute.HOW' @-
+
+# ./distribute.HOW

@@ -1,0 +1,5 @@
+Triangle/triangle intersection test routine,
+by Tomas Moller, 1997.
+See article "A Fast Triangle-Triangle Intersection Test",
+Journal of Graphics Tools, 2(2), 1997
+updated: 2001-06-20 (added line of intersection)

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# . release.HOW
+rm -f "Structured Annotations for 2D-to-3D Modeling".zip
+## zip -y because there are symlinks
+zip -ry "Structured Annotations for 2D-to-3D Modeling".zip "Structured Annotations for 2D-to-3D Modeling"
+mv -f ~/Work/demos/"Structured Annotations for 2D-to-3D Modeling"/"Structured Annotations for 2D-to-3D Modeling".zip ~/Work/demos/"Structured Annotations for 2D-to-3D Modeling"/"Structured Annotations for 2D-to-3D Modeling"-previous.zip
+cp "Structured Annotations for 2D-to-3D Modeling".zip ~/Work/demos/"Structured Annotations for 2D-to-3D Modeling"/
+rm -rf ~/Work/demos/"Structured Annotations for 2D-to-3D Modeling"/"Structured Annotations for 2D-to-3D Modeling"
+(cd ~/Work/demos/"Structured Annotations for 2D-to-3D Modeling"/ && unzip "Structured Annotations for 2D-to-3D Modeling".zip)
+\cp "Structured Annotations for 2D-to-3D Modeling".zip ~/Work/exposition/academic_page/annotations/
+\cp "Structured Annotations for 2D-to-3D Modeling"/structured_annotations-source.tar.gz ~/Work/exposition/academic_page/annotations/
+scp ~/Work/exposition/academic_page/annotations/structured_annotations-source.tar.gz gmu:www/annotations/
+scp ~/Work/exposition/academic_page/annotations/"Structured Annotations for 2D-to-3D Modeling".zip gmu:www/annotations/

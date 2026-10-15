@@ -1,0 +1,9 @@
+-i https://pypi.org/simple
+./ext/pyftgl
+cython==0.29.16
+numpy==1.18.2
+pillow==7.0.0
+pyopengl==3.1.5
+scipy==1.4.1
+six==1.14.0
+wxpython==4.0.7.post2

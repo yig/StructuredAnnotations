@@ -1,0 +1,8 @@
+python -m cProfile -o prof.out wx_annotate_collection.py
+python -c "import sys, pstats; pstats.Stats(sys.argv[1]).strip_dirs().sort_stats('cumulative').print_stats()" prof.out
+
+import pstats
+p = pstats.Stats('prof.out')
+p = p.strip_dirs()
+p.sort_stats('cumulative').print_stats(20)
+p.print_callers(.5, '__setitem__')

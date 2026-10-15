@@ -1,0 +1,44 @@
+# As a comment on: https://github.com/python-pillow/Pillow/issues/4001
+
+I ran into this as well. PIL's littlecms dependency needs an additional linker flag (`-headerpad_max_install_names`) to make relocating with `py2app` possible.
+
+Here is a very short reproducible example:
+
+```
+$ mkdir py2app_PIL
+$ cd py2app_PIL/
+$ python3 -m venv .venv
+$ . .venv/bin/activate
+(.venv) $ pip install Pillow py2app
+...
+Successfully installed Pillow-7.1.1 altgraph-0.17 macholib-1.14 modulegraph-0.18 py2app-0.21
+(.venv) $ echo 'import PIL' > main.py
+(.venv) $ echo 'print( PIL.__version__ )' >> main.py
+(.venv) $ py2applet --packages=PIL main.py 
+running py2app
+...
+ValueError: New Mach-O header is too large to relocate in '/private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/liblcms2.2.dylib' (new size=1688, max size=1680, delta=48)
+```
+
+I am running macOS 10.14.6 with homebrew Python 3.7.7 and Pillow 7.1.1.
+
+As asked above ( https://github.com/python-pillow/Pillow/issues/4001#issuecomment-521573935 ), this error does not occur with Pillow 5.3.
+
+The other related issue ( https://github.com/python-pillow/Pillow/issues/3297 ) says the non-relocatability of `libtiff` was fixed in `macholib` 1.11. The output of `pip` shows that it installed `macholib-1.14`.
+
+Someone on stackoverflow ( https://stackoverflow.com/questions/56604893/python-py2app-and-pillow-error-mach-o-header-is-too-large ) fixed the problem by recompiling littlecms with the aforementioned linker flag. They also suggested just deleting `liblcms2.2.dylib`, as in `rm .venv/lib/python3.7/site-packages/PIL/.dylibs/liblcms2.2.dylib`. That also "works".
+
+Here are the commands without output for copying-and-pasting:
+
+```
+mkdir py2app_PIL
+cd py2app_PIL/
+python3 -m venv .venv
+. .venv/bin/activate
+pip install 'Pillow==5.3' py2app
+echo 'import PIL' > main.py
+echo 'print( PIL.__version__ )' >> main.py
+py2applet --packages=PIL main.py
+```
+
+The full output is attached.

@@ -1,0 +1,12 @@
+## I originally did this to bootstrap the setup.py
+# py2applet-2.7 --make-setup wx_annotate_collection.py --resources modes widgets --frameworks *.dylib
+
+## Clean:
+# rm -rf build dist
+
+## Test:
+# python setup.py py2app -A
+## For real:
+# python setup.py py2app
+## Run:
+# ./dist/Structured\ Annotations\ for\ 2D-to-3D\ Modeling.app/Contents/MacOS/Structured\ Annotations\ for\ 2D-to-3D\ Modeling

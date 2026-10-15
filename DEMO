@@ -1,0 +1,10 @@
+python wx_annotate_sphere.py scenes/camel-branch.annscene
+python wx_annotate_sphere.py scenes/goofy\ horse.annscene
+python wx_annotate_sphere.py scenes/cactus-3.annscene
+python wx_annotate_sphere.py scenes/hands-achewood-2008-07-14.annscene
+python wx_annotate_sphere.py scenes/crow\ bakery\ -\ giraffe.annscene
+python wx_annotate_sphere.py scenes/crow\ bakery\ -\ panda.annscene
+python wx_annotate_sphere.py scenes/ponyo_3s.annscene
+python wx_annotate_sphere.py scenes/suzuki_hoshino_2.annscene
+python wx_annotate_sphere.py scenes/richdoble_design1.annscene
+python wx_annotate_sphere.py scenes/castlevania-wii-whip2.annscene

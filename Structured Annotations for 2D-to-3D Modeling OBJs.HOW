@@ -1,0 +1,12 @@
+rm -rf 'Structured Annotations for 2D-to-3D Modeling OBJs'
+mkdir 'Structured Annotations for 2D-to-3D Modeling OBJs'
+cp OBJ-LICENSE.md 'Structured Annotations for 2D-to-3D Modeling OBJs/LICENSE.md'
+find scenes -name '*.obj' -exec cp '{}' 'Structured Annotations for 2D-to-3D Modeling OBJs' ';'
+
+cd 'Structured Annotations for 2D-to-3D Modeling OBJs'
+mv 090424-the-civilian.obj sf2-090424-the-civilian.obj
+mv everything.obj bunny.obj
+mv everything-with-face.obj bunny-with-face.obj
+cd ..
+
+zip -r 'Structured Annotations for 2D-to-3D Modeling OBJs.zip' 'Structured Annotations for 2D-to-3D Modeling OBJs'

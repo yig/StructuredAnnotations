@@ -1,0 +1,27 @@
+/dist
+/debug-annscene
+/debug-objs
+/debug-out
+.venv
+*~
+*.o
+*.pyc
+*.pyo
+*.dylib
+*.dSYM
+.eggs
+/geometry.c
+/geometry.so
+/geometry.cpython-37m-darwin.so
+/sessions
+/last_session.annscene
+/last xsection.xsection
+/FTGL.so
+/ext/Eigen
+/ext/pyftgl/build
+/build
+/dist
+/Structured Annotations for 2D-to-3D Modeling
+/Structured Annotations for 2D-to-3D Modeling.zip
+/Structured Annotations for 2D-to-3D Modeling OBJs
+/Structured Annotations for 2D-to-3D Modeling OBJs.zip

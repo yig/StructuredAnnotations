@@ -1,0 +1,35 @@
+ifndef OPTIONAL_DIRECTIVES
+OPTIONAL_DIRECTIVES := 
+endif
+
+# check if the PARDISO_LIB variable is defined.  If so, compile with PARDISO turned on.
+ifdef PARDISO_LIB
+# OPTIONAL_DIRECTIVES := ${OPTIONAL_DIRECTIVES} -DPARDISO_ON
+endif
+
+ifdef BLASLAPACK_INCLUDE 
+BLASLAPACK_INCLUDE += -DHAVE_LAPACK_INCLUDE
+endif
+
+#export CXX = /usr/bin/g++ -O3 -falign-loops=16 -funroll-loops -g
+#export CXX = /usr/bin/g++ -O3 -falign-loops=16 -funroll-loops -ftree-vectorize -g
+export CXX = /usr/bin/g++ -g -fno-inline
+#export CXX = /usr/bin/g++ -g -O1
+#export CXX = gfilt -g -fno-inline
+#export CXX = /usr/bin/g++ -g -O1
+
+# Add some useful default flags if the user hasn't done so yet
+ifndef USER_CXXFLAGS
+  USER_CXXFLAGS := -Wall -g
+endif
+
+ifndef USER_LDFLAGS
+  USER_LDFLAGS := 
+endif
+
+ifndef MESHOPT_INCLUDE
+MESHOPT_INCLUDE := -I${MESHOPT_HOME}/src
+endif
+
+export CXXFLAGS = ${USER_CXXFLAGS} ${BLASLAPACK_INCLUDE} ${MESHOPT_INCLUDE} ${ADT_INCLUDE} ${TAO_INCLUDE} ${PETSC_INCLUDE} ${OPENMESH_INCLUDE} ${GLUT_INCLUDE} ${BOOST_INCLUDE} ${OPTIONAL_DIRECTIVES}
+LDFLAGS = ${USER_LDFLAGS} ${PARDISO_LIB} ${OPENMESH_LIB} ${TAO_LIB} ${PETSC_LIB} ${GLUT_LIB} ${GL_LIB} ${SYSTEM_LIB} ${BOOST_LIB}

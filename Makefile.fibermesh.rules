@@ -1,0 +1,21 @@
+include Makefile.fibermesh.defs
+
+SOURCES=fibermesh.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+
+compile: ${OBJECTS}
+
+.cpp:
+	${CXX} -c ${CXXFLAGS} ${USER_CXXFLAGS} $@.cpp
+
+libfibermesh.dylib: compile
+	${CXX} fibermesh.o -dynamiclib -o $@ ${LDFLAGS} ${USER_LDFLAGS}
+
+library: libfibermesh.dylib
+
+depend:
+	cd src && $(MAKE) depend
+
+clean:
+	-rm ${OBJECTS}
+	-rm libfibermesh.dylib

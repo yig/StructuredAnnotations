@@ -1,0 +1,24 @@
+## A circle
+curve = [ ( .5 * cos( theta ), .5 * sin( theta ) ) for theta in linspace( 0, 2*pi, 100 ) ]
+
+## Simple inflation:
+import fibermesh
+mesh = fibermesh.inflate( curve )
+
+## Medium control:
+import annotations_rotund
+silhouette_edges = range(len( curve ))
+sharp_cut_edges = []
+region = annotations_rotund.RotundRegion( curve, silhouette_edges, sharp_cut_edges )
+mesh, llconstraints, xyz_cross_sections = annotations_rotund.mesh_llconstraints_from_constraints2( region )
+region.mesh = mesh
+region.llconstraints = llconstraints
+region.cross_sections3d = xyz_cross_sections
+use_cpp = False ## You have to compile stuff to get the C++ version
+use_cotangent = True ## We might want this.
+region.iterate( N, fast = use_cpp, use_cotangent = use_cotangent, linear = False )
+
+## Most control:
+import fibermesh
+# look at the code in fibermesh.inflate() to create mesh and constraints
+fibermesh.optimize_surface2( mesh, constraints, max_iterations = 10, graph_not_cotangent_weights = False, vertex_normal_motion_only = True )

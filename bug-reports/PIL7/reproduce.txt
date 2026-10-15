@@ -1,0 +1,897 @@
+yotronagon:bug-reports yotam$ mkdir py2app_PIL
+yotronagon:bug-reports yotam$ cd py2app_PIL/
+yotronagon:py2app_PIL yotam$ python3 -m venv .venv
+yotronagon:py2app_PIL yotam$ . .venv/bin/activate
+(.venv) yotronagon:py2app_PIL yotam$ pip install Pillow py2app
+Collecting Pillow
+  Using cached https://files.pythonhosted.org/packages/43/0e/db0117d3c810cc5c5d04802988be8983f4f51a78ae65d53bddcff68bf692/Pillow-7.1.1-cp37-cp37m-macosx_10_10_x86_64.whl
+Collecting py2app
+  Using cached https://files.pythonhosted.org/packages/e1/6c/21439508b39e2789ca5a8980e625cbdd0df2655840dfd7e0be203833d922/py2app-0.21-py2.py3-none-any.whl
+Collecting modulegraph>=0.17 (from py2app)
+  Using cached https://files.pythonhosted.org/packages/e6/27/6c4fee482ec6e6f8f0959d65ab739dbbcbecbd3031d2f82c4f5decfebd90/modulegraph-0.18-py2.py3-none-any.whl
+Collecting altgraph>=0.16 (from py2app)
+  Using cached https://files.pythonhosted.org/packages/ee/3d/bfca21174b162f6ce674953f1b7a640c1498357fa6184776029557c25399/altgraph-0.17-py2.py3-none-any.whl
+Collecting macholib>=1.11 (from py2app)
+  Using cached https://files.pythonhosted.org/packages/3c/e1/c12f8d6af5d745ce88f270aeb243cb2bd6d8186320e5122df87fded29e4e/macholib-1.14-py2.py3-none-any.whl
+Requirement already satisfied: setuptools in ./.venv/lib/python3.7/site-packages (from modulegraph>=0.17->py2app) (41.2.0)
+Installing collected packages: Pillow, altgraph, modulegraph, macholib, py2app
+Successfully installed Pillow-7.1.1 altgraph-0.17 macholib-1.14 modulegraph-0.18 py2app-0.21
+WARNING: You are using pip version 19.2.3, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+(.venv) yotronagon:py2app_PIL yotam$ echo 'import PIL' > main.py
+(.venv) yotronagon:py2app_PIL yotam$ echo 'print( PIL.__version__ )' >> main.py
+(.venv) yotronagon:py2app_PIL yotam$ py2applet --packages=PIL main.py 
+running py2app
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/temp
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist
+creating build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/lib-dynload
+creating build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/Frameworks
+*** using recipe: PIL *** {'prescripts': ['py2app.recipes.PIL.prescript', <_io.StringIO object at 0x108b8a410>], 'include': 'PIL.JpegPresets', 'flatpackages': ['/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL']}
+--- Skipping recipe botocore ---
+CTYPES USERS []
+--- Skipping recipe ctypes ---
+--- Skipping recipe docutils ---
+*** using recipe: ftplib *** {}
+--- Skipping recipe botocore ---
+CTYPES USERS []
+--- Skipping recipe ctypes ---
+--- Skipping recipe docutils ---
+*** using recipe: importlib *** {'expected_missing_imports': {'_frozen_importlib_external'}}
+--- Skipping recipe botocore ---
+CTYPES USERS []
+--- Skipping recipe ctypes ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+*** using recipe: mimetypes *** {'expected_missing_imports': {'winreg'}}
+--- Skipping recipe botocore ---
+CTYPES USERS []
+--- Skipping recipe ctypes ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+*** using recipe: os_module *** {'expected_missing_imports': {'nt'}}
+--- Skipping recipe botocore ---
+CTYPES USERS []
+--- Skipping recipe ctypes ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+*** using recipe: pydoc *** {}
+--- Skipping recipe botocore ---
+CTYPES USERS []
+--- Skipping recipe ctypes ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+--- Skipping recipe pyenchant ---
+--- Skipping recipe pygame ---
+--- Skipping recipe pyopengl ---
+--- Skipping recipe pyside ---
+--- Skipping recipe pyside2 ---
+--- Skipping recipe pyzmq ---
+--- Skipping recipe qt5 ---
+*** using recipe: re *** {'expected_missing_imports': {'sys.getwindowsversion'}}
+--- Skipping recipe botocore ---
+CTYPES USERS []
+--- Skipping recipe ctypes ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+--- Skipping recipe pyenchant ---
+--- Skipping recipe pygame ---
+--- Skipping recipe pyopengl ---
+--- Skipping recipe pyside ---
+--- Skipping recipe pyside2 ---
+--- Skipping recipe pyzmq ---
+--- Skipping recipe qt5 ---
+--- Skipping recipe scipy ---
+*** using recipe: setuptools *** {'expected_missing_imports': {'pkg_resources._vendor.appdirs', 'pkg_resources.extern.pyparsing', 'pkg_resources.extern.six', '__main__.__requires__', '__builtin__'}}
+--- Skipping recipe botocore ---
+CTYPES USERS [SourceModule('ctypes._endian', '/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/_endian.py'), SourceModule('uuid', '/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/uuid.py'), Package('ctypes.macholib', '/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/macholib/__init__.py', ['/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/macholib']), SourceModule('ctypes._aix', '/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/_aix.py'), SourceModule('ctypes.util', '/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/util.py'), SourceModule('pkg_resources._vendor.appdirs', '/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/appdirs.py')]
+*** using recipe: ctypes *** {'prescripts': ['py2app.bootstrap.ctypes_setup']}
+--- Skipping recipe botocore ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+--- Skipping recipe pyenchant ---
+--- Skipping recipe pygame ---
+--- Skipping recipe pyopengl ---
+--- Skipping recipe pyside ---
+--- Skipping recipe pyside2 ---
+--- Skipping recipe pyzmq ---
+--- Skipping recipe qt5 ---
+--- Skipping recipe scipy ---
+--- Skipping recipe shiboken2 ---
+--- Skipping recipe sip ---
+*** using recipe: six *** {}
+--- Skipping recipe botocore ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+--- Skipping recipe pyenchant ---
+--- Skipping recipe pygame ---
+--- Skipping recipe pyopengl ---
+--- Skipping recipe pyside ---
+--- Skipping recipe pyside2 ---
+--- Skipping recipe pyzmq ---
+--- Skipping recipe qt5 ---
+--- Skipping recipe scipy ---
+--- Skipping recipe shiboken2 ---
+--- Skipping recipe sip ---
+*** using recipe: subprocess *** {'expected_missing_imports': {'_winapi'}}
+--- Skipping recipe botocore ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+--- Skipping recipe pyenchant ---
+--- Skipping recipe pygame ---
+--- Skipping recipe pyopengl ---
+--- Skipping recipe pyside ---
+--- Skipping recipe pyside2 ---
+--- Skipping recipe pyzmq ---
+--- Skipping recipe qt5 ---
+--- Skipping recipe scipy ---
+--- Skipping recipe shiboken2 ---
+--- Skipping recipe sip ---
+--- Skipping recipe sysconfig_module ---
+--- Skipping recipe tkinter ---
+*** using recipe: uuid *** {'expected_missing_imports': {'win32wnet', 'netbios'}}
+--- Skipping recipe botocore ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+--- Skipping recipe pyenchant ---
+--- Skipping recipe pygame ---
+--- Skipping recipe pyopengl ---
+--- Skipping recipe pyside ---
+--- Skipping recipe pyside2 ---
+--- Skipping recipe pyzmq ---
+--- Skipping recipe qt5 ---
+--- Skipping recipe scipy ---
+--- Skipping recipe shiboken2 ---
+--- Skipping recipe sip ---
+--- Skipping recipe sysconfig_module ---
+--- Skipping recipe tkinter ---
+*** using recipe: virtualenv *** {}
+--- Skipping recipe botocore ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+--- Skipping recipe pyenchant ---
+--- Skipping recipe pygame ---
+--- Skipping recipe pyopengl ---
+--- Skipping recipe pyside ---
+--- Skipping recipe pyside2 ---
+--- Skipping recipe pyzmq ---
+--- Skipping recipe qt5 ---
+--- Skipping recipe scipy ---
+--- Skipping recipe shiboken2 ---
+--- Skipping recipe sip ---
+--- Skipping recipe sysconfig_module ---
+--- Skipping recipe tkinter ---
+--- Skipping recipe wx ---
+*** using recipe: xml *** {}
+--- Skipping recipe botocore ---
+--- Skipping recipe docutils ---
+--- Skipping recipe lxml ---
+--- Skipping recipe matplotlib ---
+--- Skipping recipe numpy ---
+--- Skipping recipe pyenchant ---
+--- Skipping recipe pygame ---
+--- Skipping recipe pyopengl ---
+--- Skipping recipe pyside ---
+--- Skipping recipe pyside2 ---
+--- Skipping recipe pyzmq ---
+--- Skipping recipe qt5 ---
+--- Skipping recipe scipy ---
+--- Skipping recipe shiboken2 ---
+--- Skipping recipe sip ---
+--- Skipping recipe sysconfig_module ---
+--- Skipping recipe tkinter ---
+--- Skipping recipe wx ---
+*** filtering dependencies ***
+888 total
+40 filtered
+123 orphaned
+848 remaining
+*** create binaries ***
+*** byte compile python files ***
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/__init__.py to pkg_resources/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/pkg_resources
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/__init__.py to pkg_resources/_vendor/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/pkg_resources/_vendor
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/appdirs.py to pkg_resources/_vendor/appdirs.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/__about__.py to pkg_resources/_vendor/packaging/__about__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/pkg_resources/_vendor/packaging
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/__init__.py to pkg_resources/_vendor/packaging/__init__.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/_compat.py to pkg_resources/_vendor/packaging/_compat.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/_structures.py to pkg_resources/_vendor/packaging/_structures.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/markers.py to pkg_resources/_vendor/packaging/markers.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/requirements.py to pkg_resources/_vendor/packaging/requirements.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/specifiers.py to pkg_resources/_vendor/packaging/specifiers.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/utils.py to pkg_resources/_vendor/packaging/utils.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/version.py to pkg_resources/_vendor/packaging/version.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py to pkg_resources/_vendor/pyparsing.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/_vendor/six.py to pkg_resources/_vendor/six.pyc
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/extern/__init__.py to pkg_resources/extern/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/pkg_resources/extern
+byte-compiling /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/pkg_resources/py31compat.py to pkg_resources/py31compat.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/__future__.py to __future__.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_bootlocale.py to _bootlocale.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_collections_abc.py to _collections_abc.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_compat_pickle.py to _compat_pickle.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_compression.py to _compression.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_dummy_thread.py to _dummy_thread.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_markupbase.py to _markupbase.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_osx_support.py to _osx_support.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_py_abc.py to _py_abc.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_pydecimal.py to _pydecimal.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_strptime.py to _strptime.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_sysconfigdata_m_darwin_darwin.py to _sysconfigdata_m_darwin_darwin.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_threading_local.py to _threading_local.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/_weakrefset.py to _weakrefset.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/abc.py to abc.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/argparse.py to argparse.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ast.py to ast.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/base64.py to base64.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/bdb.py to bdb.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/bisect.py to bisect.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/bz2.py to bz2.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/calendar.py to calendar.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/cmd.py to cmd.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/code.py to code.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py to codecs.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codeop.py to codeop.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/collections/__init__.py to collections/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/collections
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/collections/abc.py to collections/abc.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/colorsys.py to colorsys.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/configparser.py to configparser.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextlib.py to contextlib.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextvars.py to contextvars.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py to copy.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copyreg.py to copyreg.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/__init__.py to ctypes/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/ctypes
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/_aix.py to ctypes/_aix.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/_endian.py to ctypes/_endian.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/macholib/__init__.py to ctypes/macholib/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/ctypes/macholib
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/macholib/dyld.py to ctypes/macholib/dyld.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/macholib/dylib.py to ctypes/macholib/dylib.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/macholib/framework.py to ctypes/macholib/framework.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/util.py to ctypes/util.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/datetime.py to datetime.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/dbm/__init__.py to dbm/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/dbm
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/dbm/gnu.py to dbm/gnu.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/dbm/ndbm.py to dbm/ndbm.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/decimal.py to decimal.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/difflib.py to difflib.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/dis.py to dis.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/distutils/__init__.py to distutils/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/distutils
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/distutils/log.py to distutils/log.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/doctest.py to doctest.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/__init__.py to email/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/email
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/_encoded_words.py to email/_encoded_words.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/_header_value_parser.py to email/_header_value_parser.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/_parseaddr.py to email/_parseaddr.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/_policybase.py to email/_policybase.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/base64mime.py to email/base64mime.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/charset.py to email/charset.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/contentmanager.py to email/contentmanager.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/encoders.py to email/encoders.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/errors.py to email/errors.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/feedparser.py to email/feedparser.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/generator.py to email/generator.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/header.py to email/header.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/headerregistry.py to email/headerregistry.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/iterators.py to email/iterators.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/message.py to email/message.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/mime/__init__.py to email/mime/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/email/mime
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/mime/base.py to email/mime/base.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/mime/multipart.py to email/mime/multipart.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/mime/nonmultipart.py to email/mime/nonmultipart.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/mime/text.py to email/mime/text.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/parser.py to email/parser.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/policy.py to email/policy.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/quoprimime.py to email/quoprimime.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/utils.py to email/utils.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/__init__.py to encodings/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/encodings
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/aliases.py to encodings/aliases.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/ascii.py to encodings/ascii.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/base64_codec.py to encodings/base64_codec.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/big5.py to encodings/big5.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/big5hkscs.py to encodings/big5hkscs.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/bz2_codec.py to encodings/bz2_codec.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/charmap.py to encodings/charmap.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp037.py to encodings/cp037.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1006.py to encodings/cp1006.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1026.py to encodings/cp1026.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1125.py to encodings/cp1125.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1140.py to encodings/cp1140.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1250.py to encodings/cp1250.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1251.py to encodings/cp1251.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1252.py to encodings/cp1252.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1253.py to encodings/cp1253.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1254.py to encodings/cp1254.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1255.py to encodings/cp1255.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1256.py to encodings/cp1256.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1257.py to encodings/cp1257.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp1258.py to encodings/cp1258.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp273.py to encodings/cp273.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp424.py to encodings/cp424.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp437.py to encodings/cp437.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp500.py to encodings/cp500.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp65001.py to encodings/cp65001.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp720.py to encodings/cp720.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp737.py to encodings/cp737.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp775.py to encodings/cp775.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp850.py to encodings/cp850.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp852.py to encodings/cp852.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp855.py to encodings/cp855.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp856.py to encodings/cp856.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp857.py to encodings/cp857.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp858.py to encodings/cp858.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp860.py to encodings/cp860.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp861.py to encodings/cp861.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp862.py to encodings/cp862.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp863.py to encodings/cp863.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp864.py to encodings/cp864.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp865.py to encodings/cp865.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp866.py to encodings/cp866.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp869.py to encodings/cp869.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp874.py to encodings/cp874.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp875.py to encodings/cp875.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp932.py to encodings/cp932.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp949.py to encodings/cp949.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/cp950.py to encodings/cp950.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/euc_jis_2004.py to encodings/euc_jis_2004.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/euc_jisx0213.py to encodings/euc_jisx0213.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/euc_jp.py to encodings/euc_jp.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/euc_kr.py to encodings/euc_kr.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/gb18030.py to encodings/gb18030.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/gb2312.py to encodings/gb2312.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/gbk.py to encodings/gbk.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/hex_codec.py to encodings/hex_codec.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/hp_roman8.py to encodings/hp_roman8.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/hz.py to encodings/hz.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/idna.py to encodings/idna.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso2022_jp.py to encodings/iso2022_jp.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso2022_jp_1.py to encodings/iso2022_jp_1.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso2022_jp_2.py to encodings/iso2022_jp_2.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso2022_jp_2004.py to encodings/iso2022_jp_2004.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso2022_jp_3.py to encodings/iso2022_jp_3.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso2022_jp_ext.py to encodings/iso2022_jp_ext.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso2022_kr.py to encodings/iso2022_kr.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_1.py to encodings/iso8859_1.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_10.py to encodings/iso8859_10.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_11.py to encodings/iso8859_11.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_13.py to encodings/iso8859_13.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_14.py to encodings/iso8859_14.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_15.py to encodings/iso8859_15.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_16.py to encodings/iso8859_16.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_2.py to encodings/iso8859_2.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_3.py to encodings/iso8859_3.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_4.py to encodings/iso8859_4.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_5.py to encodings/iso8859_5.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_6.py to encodings/iso8859_6.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_7.py to encodings/iso8859_7.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_8.py to encodings/iso8859_8.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/iso8859_9.py to encodings/iso8859_9.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/johab.py to encodings/johab.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/koi8_r.py to encodings/koi8_r.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/koi8_t.py to encodings/koi8_t.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/koi8_u.py to encodings/koi8_u.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/kz1048.py to encodings/kz1048.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/latin_1.py to encodings/latin_1.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_arabic.py to encodings/mac_arabic.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_centeuro.py to encodings/mac_centeuro.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_croatian.py to encodings/mac_croatian.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_cyrillic.py to encodings/mac_cyrillic.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_farsi.py to encodings/mac_farsi.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_greek.py to encodings/mac_greek.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_iceland.py to encodings/mac_iceland.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_latin2.py to encodings/mac_latin2.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_roman.py to encodings/mac_roman.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_romanian.py to encodings/mac_romanian.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mac_turkish.py to encodings/mac_turkish.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/mbcs.py to encodings/mbcs.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/oem.py to encodings/oem.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/palmos.py to encodings/palmos.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/ptcp154.py to encodings/ptcp154.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/punycode.py to encodings/punycode.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/quopri_codec.py to encodings/quopri_codec.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/raw_unicode_escape.py to encodings/raw_unicode_escape.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/rot_13.py to encodings/rot_13.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/shift_jis.py to encodings/shift_jis.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/shift_jis_2004.py to encodings/shift_jis_2004.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/shift_jisx0213.py to encodings/shift_jisx0213.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/tis_620.py to encodings/tis_620.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/undefined.py to encodings/undefined.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/unicode_escape.py to encodings/unicode_escape.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/unicode_internal.py to encodings/unicode_internal.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_16.py to encodings/utf_16.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_16_be.py to encodings/utf_16_be.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_16_le.py to encodings/utf_16_le.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_32.py to encodings/utf_32.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_32_be.py to encodings/utf_32_be.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_32_le.py to encodings/utf_32_le.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_7.py to encodings/utf_7.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_8.py to encodings/utf_8.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/utf_8_sig.py to encodings/utf_8_sig.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/uu_codec.py to encodings/uu_codec.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/encodings/zlib_codec.py to encodings/zlib_codec.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/enum.py to enum.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/fnmatch.py to fnmatch.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/fractions.py to fractions.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ftplib.py to ftplib.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/functools.py to functools.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/genericpath.py to genericpath.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/getopt.py to getopt.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/getpass.py to getpass.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/gettext.py to gettext.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/glob.py to glob.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/gzip.py to gzip.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/hashlib.py to hashlib.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/heapq.py to heapq.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/html/__init__.py to html/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/html
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/html/entities.py to html/entities.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/html/parser.py to html/parser.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/__init__.py to http/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/http
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py to http/client.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/cookiejar.py to http/cookiejar.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/cookies.py to http/cookies.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/server.py to http/server.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/imp.py to imp.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/__init__.py to importlib/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/importlib
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/_bootstrap.py to importlib/_bootstrap.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/_bootstrap_external.py to importlib/_bootstrap_external.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/abc.py to importlib/abc.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/machinery.py to importlib/machinery.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/importlib/util.py to importlib/util.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/inspect.py to inspect.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/io.py to io.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/keyword.py to keyword.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/linecache.py to linecache.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/locale.py to locale.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/logging/__init__.py to logging/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/logging
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lzma.py to lzma.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/mimetypes.py to mimetypes.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/netrc.py to netrc.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ntpath.py to ntpath.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/numbers.py to numbers.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/opcode.py to opcode.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/operator.py to operator.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/optparse.py to optparse.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/os.py to os.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pathlib.py to pathlib.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pdb.py to pdb.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pickle.py to pickle.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pkgutil.py to pkgutil.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/platform.py to platform.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/plistlib.py to plistlib.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/posixpath.py to posixpath.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pprint.py to pprint.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/py_compile.py to py_compile.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pydoc.py to pydoc.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pydoc_data/__init__.py to pydoc_data/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/pydoc_data
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pydoc_data/topics.py to pydoc_data/topics.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/queue.py to queue.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/quopri.py to quopri.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/random.py to random.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/re.py to re.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/reprlib.py to reprlib.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/runpy.py to runpy.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/selectors.py to selectors.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shlex.py to shlex.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/shutil.py to shutil.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/signal.py to signal.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py to socket.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socketserver.py to socketserver.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sre_compile.py to sre_compile.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sre_constants.py to sre_constants.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sre_parse.py to sre_parse.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ssl.py to ssl.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/stat.py to stat.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/string.py to string.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/stringprep.py to stringprep.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/struct.py to struct.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py to subprocess.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/sysconfig.py to sysconfig.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tarfile.py to tarfile.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tempfile.py to tempfile.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/textwrap.py to textwrap.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py to threading.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tkinter/__init__.py to tkinter/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/tkinter
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tkinter/constants.py to tkinter/constants.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/token.py to token.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tokenize.py to tokenize.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/traceback.py to traceback.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/tracemalloc.py to tracemalloc.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/types.py to types.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/typing.py to typing.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/__init__.py to unittest/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/unittest
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py to unittest/case.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/loader.py to unittest/loader.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/main.py to unittest/main.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/result.py to unittest/result.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/runner.py to unittest/runner.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/signals.py to unittest/signals.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/suite.py to unittest/suite.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/util.py to unittest/util.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/__init__.py to urllib/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/urllib
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/error.py to urllib/error.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/parse.py to urllib/parse.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/request.py to urllib/request.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/response.py to urllib/response.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/urllib/robotparser.py to urllib/robotparser.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/uu.py to uu.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/uuid.py to uuid.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/warnings.py to warnings.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/weakref.py to weakref.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/webbrowser.py to webbrowser.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xml/__init__.py to xml/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/xml
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xml/parsers/__init__.py to xml/parsers/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/xml/parsers
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xml/parsers/expat.py to xml/parsers/expat.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xmlrpc/__init__.py to xmlrpc/__init__.pyc
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/xmlrpc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xmlrpc/client.py to xmlrpc/client.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/xmlrpc/server.py to xmlrpc/server.pyc
+byte-compiling /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/zipfile.py to zipfile.pyc
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/macholib/fetch_macholib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/ctypes/macholib/fetch_macholib
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/macholib/README.ctypes -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/ctypes/macholib/README.ctypes
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/ctypes/macholib/fetch_macholib.bat -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/ctypes/macholib/fetch_macholib.bat
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/distutils/README -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/distutils/README
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/distutils/distutils.cfg -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/distutils/distutils.cfg
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/email/architecture.rst -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/email/architecture.rst
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/pydoc_data/_pydoc.css -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/collect/pydoc_data/_pydoc.css
+*** creating application bundle: main ***
+Copy '/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/py2app/apptemplate/prebuilt/main-x86_64' -> '/private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/MacOS/main'
+byte-compiling /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/site.py to site.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/main.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/config-3.7m-darwin
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/include
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/include/python3.7m
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/include/python3.7m/pyconfig.h -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/include/python3.7m/pyconfig.h
+copying file build/bdist.macosx-10.14-x86_64/python3.7-standalone/app/python37.zip -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/zlib.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/MpoImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/MpoImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageMode.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageMode.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PngImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PngImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/XbmImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/XbmImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PcxImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PcxImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/SunImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/SunImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageFile.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageFile.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/SpiderImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/SpiderImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/TarIO.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/TarIO.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/FitsStubImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/FitsStubImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/MpegImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/MpegImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/BdfFontFile.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/BdfFontFile.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/GribStubImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/GribStubImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_webp.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_webp.cpython-37m-darwin.so
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageStat.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageStat.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PixarImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PixarImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/GimpPaletteFile.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/GimpPaletteFile.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageColor.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageColor.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ContainerIO.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ContainerIO.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/MspImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/MspImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_imagingft.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_imagingft.cpython-37m-darwin.so
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/MicImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/MicImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_version.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_version.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_imagingcms.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_imagingcms.cpython-37m-darwin.so
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImtImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImtImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/GifImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/GifImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PalmImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PalmImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageQt.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageQt.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageMath.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageMath.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PaletteFile.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PaletteFile.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/FontFile.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/FontFile.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PdfParser.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PdfParser.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ExifTags.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ExifTags.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageCms.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageCms.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/FpxImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/FpxImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageChops.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageChops.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/BufrStubImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/BufrStubImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PSDraw.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PSDraw.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PcdImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PcdImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageFilter.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageFilter.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageDraw2.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageDraw2.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImagePath.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImagePath.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_imaging.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_imaging.cpython-37m-darwin.so
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/DcxImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/DcxImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__init__.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__init__.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/JpegPresets.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/JpegPresets.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/Hdf5StubImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/Hdf5StubImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/features.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/features.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageDraw.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageDraw.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/GimpGradientFile.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/GimpGradientFile.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageWin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageWin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/IcoImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/IcoImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_imagingmath.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_imagingmath.cpython-37m-darwin.so
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PalmImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PalmImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PaletteFile.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PaletteFile.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageShow.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageShow.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/TgaImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/TgaImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/EpsImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/EpsImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/_tkinter_finder.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/_tkinter_finder.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/BufrStubImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/BufrStubImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/_version.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/_version.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/FliImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/FliImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/FtexImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/FtexImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/JpegImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/JpegImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/GdImageFile.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/GdImageFile.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageFilter.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageFilter.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/SpiderImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/SpiderImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/BlpImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/BlpImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageTransform.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageTransform.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImagePath.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImagePath.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/GribStubImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/GribStubImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PSDraw.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PSDraw.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/XpmImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/XpmImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/FitsStubImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/FitsStubImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/_util.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/_util.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/BmpImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/BmpImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageMath.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageMath.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageGrab.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageGrab.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageDraw2.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageDraw2.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PixarImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PixarImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/FpxImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/FpxImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/Image.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/Image.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/IcnsImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/IcnsImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PngImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PngImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageOps.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageOps.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageFont.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageFont.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PcfFontFile.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PcfFontFile.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/Jpeg2KImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/Jpeg2KImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/SunImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/SunImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/IcoImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/IcoImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/DcxImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/DcxImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/__main__.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/__main__.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PyAccess.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PyAccess.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/XVThumbImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/XVThumbImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageQt.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageQt.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/MspImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/MspImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/WmfImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/WmfImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PdfParser.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PdfParser.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/TiffTags.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/TiffTags.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/Hdf5StubImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/Hdf5StubImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PsdImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PsdImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageFile.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageFile.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/JpegPresets.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/JpegPresets.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageChops.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageChops.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PcxImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PcxImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageMorph.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageMorph.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/SgiImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/SgiImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/features.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/features.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageMode.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageMode.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/GbrImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/GbrImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImtImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImtImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/MpegImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/MpegImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/XbmImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/XbmImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/GifImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/GifImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PcdImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PcdImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/MpoImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/MpoImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageCms.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageCms.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageSequence.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageSequence.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageTk.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageTk.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ExifTags.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ExifTags.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/_binary.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/_binary.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PdfImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PdfImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/TarIO.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/TarIO.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/GimpPaletteFile.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/GimpPaletteFile.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/PpmImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/PpmImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageColor.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageColor.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/BdfFontFile.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/BdfFontFile.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/TiffImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/TiffImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageEnhance.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageEnhance.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ContainerIO.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ContainerIO.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/IptcImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/IptcImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/WebPImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/WebPImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageStat.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageStat.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/MicImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/MicImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/GimpGradientFile.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/GimpGradientFile.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageWin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageWin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/__init__.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/__init__.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImagePalette.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImagePalette.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/ImageDraw.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/ImageDraw.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/CurImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/CurImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/FontFile.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/FontFile.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/DdsImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/DdsImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/McIdasImagePlugin.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/McIdasImagePlugin.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__pycache__/WalImageFile.cpython-37.pyc -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__pycache__/WalImageFile.cpython-37.pyc
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_tkinter_finder.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_tkinter_finder.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/EpsImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/EpsImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/TgaImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/TgaImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageMorph.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageMorph.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/Jpeg2KImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/Jpeg2KImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/WalImageFile.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/WalImageFile.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PcfFontFile.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PcfFontFile.py
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libxcb.1.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libxcb.1.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libz.1.2.11.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libz.1.2.11.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libopenjp2.2.3.1.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libopenjp2.2.3.1.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/liblcms2.2.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/liblcms2.2.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libpng16.16.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libpng16.16.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libfreetype.6.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libfreetype.6.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libjpeg.9.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libjpeg.9.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libwebp.7.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libwebp.7.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libXdmcp.6.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libXdmcp.6.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libXau.6.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libXau.6.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libwebpmux.3.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libwebpmux.3.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libwebpdemux.2.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libwebpdemux.2.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/libtiff.5.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/libtiff.5.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/.dylibs/liblzma.5.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/liblzma.5.dylib
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_imagingtk.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_imagingtk.cpython-37m-darwin.so
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/BlpImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/BlpImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageTk.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageTk.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/GbrImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/GbrImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageOps.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageOps.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PdfImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PdfImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_imagingmorph.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_imagingmorph.cpython-37m-darwin.so
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageShow.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageShow.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageEnhance.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageEnhance.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/WmfImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/WmfImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageGrab.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageGrab.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/WebPImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/WebPImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/FliImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/FliImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/TiffTags.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/TiffTags.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/CurImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/CurImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_util.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_util.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/GdImageFile.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/GdImageFile.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/TiffImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/TiffImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/IptcImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/IptcImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImagePalette.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImagePalette.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/BmpImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/BmpImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageTransform.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageTransform.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/IcnsImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/IcnsImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/McIdasImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/McIdasImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/XpmImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/XpmImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/DdsImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/DdsImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageSequence.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageSequence.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PyAccess.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PyAccess.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/_binary.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/_binary.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/Image.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/Image.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/__main__.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/__main__.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/XVThumbImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/XVThumbImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/SgiImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/SgiImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PsdImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PsdImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/JpegImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/JpegImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/ImageFont.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/ImageFont.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/PpmImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/PpmImagePlugin.py
+copying file /Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/PIL/FtexImagePlugin.py -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/FtexImagePlugin.py
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_bisect.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_bisect.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_blake2.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_blake2.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_bz2.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_bz2.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_codecs_cn.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_codecs_cn.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_codecs_hk.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_codecs_hk.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_codecs_iso2022.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_codecs_iso2022.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_codecs_jp.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_codecs_jp.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_codecs_kr.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_codecs_kr.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_codecs_tw.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_codecs_tw.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_contextvars.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_contextvars.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_ctypes.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_ctypes.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_datetime.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_datetime.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_dbm.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_dbm.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_decimal.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_decimal.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_gdbm.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_gdbm.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_hashlib.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_hashlib.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_heapq.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_heapq.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_lzma.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_lzma.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_md5.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_md5.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_multibytecodec.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_multibytecodec.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_opcode.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_opcode.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_pickle.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_pickle.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_posixsubprocess.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_queue.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_queue.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_random.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_random.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_scproxy.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_scproxy.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_sha1.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_sha1.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_sha256.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_sha256.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_sha3.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_sha3.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_sha512.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_sha512.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_socket.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_socket.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_ssl.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_ssl.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_struct.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_struct.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_tkinter.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_tkinter.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/_uuid.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/_uuid.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/array.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/array.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/binascii.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/binascii.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/fcntl.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/fcntl.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/grp.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/grp.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/math.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/math.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/mmap.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/mmap.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/pyexpat.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/pyexpat.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/resource.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/resource.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/select.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/select.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/termios.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/termios.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/unicodedata.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/unicodedata.so
+copying file /usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload/zlib.cpython-37m-darwin.so -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/lib-dynload/zlib.so
+copying file /usr/local/bin/../Cellar/python/3.7.7/bin/../Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/Resources/PythonApplet.icns -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/PythonApplet.icns
+copying file /usr/local/bin/../Cellar/python/3.7.7/bin/../Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/MacOS/python
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/Resources
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/include
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/include/python3.7m
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/lib
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/lib/python3.7
+creating /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin
+copying file /usr/local/bin/../Cellar/python/3.7.7/bin/../Frameworks/Python.framework/Versions/3.7/Python -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/Python
+copying file /usr/local/bin/../Cellar/python/3.7.7/bin/../Frameworks/Python.framework/Versions/3.7/Resources/Info.plist -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/Resources/Info.plist
+copying file /usr/local/bin/../Cellar/python/3.7.7/bin/../Frameworks/Python.framework/Versions/3.7/include/python3.7m/pyconfig.h -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/include/python3.7m/pyconfig.h
+copying file /usr/local/bin/../Cellar/python/3.7.7/bin/../Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/Makefile -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/Python.framework/Versions/3.7/lib/python3.7/config-3.7m-darwin/Makefile
+copying file /usr/local/opt/xz/lib/liblzma.5.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/liblzma.5.dylib
+copying file /usr/local/opt/openssl@1.1/lib/libssl.1.1.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/libssl.1.1.dylib
+copying file /usr/local/Cellar/openssl@1.1/1.1.1f/lib/libcrypto.1.1.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/libcrypto.1.1.dylib
+copying file /usr/local/opt/openssl@1.1/lib/libcrypto.1.1.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/libcrypto.1.1.dylib
+copying file /usr/local/opt/gdbm/lib/libgdbm.6.dylib -> /private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Frameworks/libgdbm.6.dylib
+WARNING: Mach-O header in '/private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/liblcms2.2.dylib' may be too large to relocate
+Traceback (most recent call last):
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/bin/py2applet", line 10, in <module>
+    sys.exit(main())
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/py2app/script_py2applet.py", line 143, in main
+    build(args, scripts, data_files, options)
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/py2app/script_py2applet.py", line 191, in build
+    d = setup(app=scripts, data_files=data_files, options={"py2app": options},)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/distutils/core.py", line 148, in setup
+    dist.run_commands()
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/distutils/dist.py", line 966, in run_commands
+    self.run_command(cmd)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/distutils/dist.py", line 985, in run_command
+    cmd_obj.run()
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/py2app/build_app.py", line 907, in run
+    self._run()
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/py2app/build_app.py", line 1125, in _run
+    self.run_normal()
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/py2app/build_app.py", line 1238, in run_normal
+    self.create_binaries(py_files, pkgdirs, extensions, loader_files)
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/py2app/build_app.py", line 1629, in create_binaries
+    platfiles = mm.run()
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/macholib/MachOStandalone.py", line 166, in run
+    node.write(f)
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/macholib/MachO.py", line 173, in write
+    header.write(f)
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/macholib/MachO.py", line 403, in write
+    self.synchronize_size()
+  File "/Users/yotam/Work/ERATO/tracing/export/tracing2020/bug-reports/py2app_PIL/.venv/lib/python3.7/site-packages/macholib/MachO.py", line 391, in synchronize_size
+    self.sizediff,
+ValueError: New Mach-O header is too large to relocate in '/private/var/folders/z9/y340rgqs6ydbc7c54smlyt900000gn/T/tmpxayxil_9/dist/main.app/Contents/Resources/lib/python3.7/PIL/.dylibs/liblcms2.2.dylib' (new size=1688, max size=1680, delta=48)

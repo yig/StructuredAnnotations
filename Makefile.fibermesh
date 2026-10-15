@@ -1,0 +1,6 @@
+all: library
+
+include Makefile.fibermesh.local
+include Makefile.fibermesh.defs
+# get the build rules
+include Makefile.fibermesh.rules

@@ -1,0 +1,43 @@
+### The main file for the software is "wx_annotate_collection.py".
+### The following installs the dependencies and compiled sources needed to run.
+
+brew install ftgl eigen boost-python3
+## Create the initial .venv using Python3's `venv` to avoid the Framework issue when running wxPython.
+python3 -m venv .venv
+pipenv install
+or
+source .venv/bin/activate.{$SHELL}
+pip install -r requirements.lock.txt
+
+## pipenv install reads the Pipfile, which was built by doing the following:
+# pipenv --three
+# pipenv install numpy scipy Pillow wxpython PyOpenGL PyOpenGL-accelerate cython
+# pipenv install ext/pyftgl
+
+### Local compiled code
+
+cythonize -i geometry.pyx
+# If the cythonize command isn't in the path, it is accessible like so:
+# python2 -m Cython.Build.Cythonize -i geometry.pyx
+
+# head -20 tritri_wrapper.cpp
+cc tritri.c tritri_wrapper.cpp raytri.c raytri_wrapper.cpp -lstdc++ -fkeep-inline-functions -dynamiclib -o libtritri.dylib -g -O3 -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare
+
+# head -20 Eline_ad.mitsuba.cpp
+c++ Eline_ad.mitsuba.cpp -dynamiclib -o Eline_ad.dylib -g -O3 -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare -Iext -Iext/mitsuba -I/opt/homebrew/include/eigen3
+
+# head -20 edge_distances.cpp
+c++ edge_distances.cpp -dynamiclib -o edge_distances.dylib -g -O3 -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare
+
+# head -20 face_stitch_pattern.c
+cc face_stitch_pattern.c -dynamiclib -o face_stitch_pattern.dylib -std=c99 -g -O3 -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare
+
+# head -20 laplacian_editing_wrapper.cpp
+c++ laplacian_editing_wrapper.cpp -Iext -dynamiclib -o liblaplacian_editing.dylib -g -O1 -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare
+
+### "Structured Annotations for 2D-to-3D Modeling.app"
+## To make this into a distributable "Structured Annotations for 2D-to-3D Modeling.app",
+## install py2app
+pipenv install --dev py2app
+## and then run
+pipenv run python setup.py py2app

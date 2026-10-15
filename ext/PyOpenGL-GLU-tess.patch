@@ -1,0 +1,11 @@
+--- OpenGL\GLU\tess.py.bak	2008-11-24 19:01:51.139240800 +0000
++++ OpenGL\GLU\tess.py	2008-11-28 02:25:40.639000000 +0000
+@@ -111,7 +111,7 @@
+ 					)
+ 				)
+ 			outP = ctypes.c_void_p(self.noteObject(result))
+-			outData.value = ctypes.addressof( outP )
++			outData[0] = outP
+ 			return None
+ 		return wrap
+ 	def dataWrapper( self, function ):

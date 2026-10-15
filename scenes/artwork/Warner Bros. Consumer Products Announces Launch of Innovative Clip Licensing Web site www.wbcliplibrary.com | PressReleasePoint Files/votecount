@@ -1,0 +1,20 @@
+				var key = "_http:\/\/www.pressreleasepoint.com\/warner-bros-consumer-products-announces-launch-innovative-clip-licensing-web-site-wwwwbcliplibraryco_us_en-US_square";
+				var voteHtml = "vote<br>now";
+
+				if(typeof(window.yahooBuzzBadgeVoteCountValues) !== "undefined") {
+					window.yahooBuzzBadgeVoteCountValues[key] = voteHtml;	
+				} else {
+					window.yahooBuzzBadgeVoteCountValues = {};
+				}
+
+				if(typeof(window.yahooBuzzBadgeVoteCountIds) !== "undefined") {
+					var ids = window.yahooBuzzBadgeVoteCountIds[key];
+					if(typeof(ids) !== "undefined") {
+						var numIds = ids.length;
+						for(var i = 0; i < numIds; i++) {
+							if(document.getElementById(ids[i])) {
+								document.getElementById(ids[i]).innerHTML = voteHtml;
+							}
+						}
+					}
+				}

@@ -1,0 +1,79 @@
+#MESHOPT_HOME = /Users/yotam/Work/meshopt/highorder/meshopt
+MESHOPT_HOME = /Users/yotam/Work/meshopt/git-devel/meshopt
+
+# update PETSC_DIR to point at where PETSC is installed on your machine.
+# including PETSc's "variables" makefile sets our PETSC_INCLUDE variable
+# and will (almost) set PETSC_LIB for us too
+#export PETSC_ARCH = darwin8.7.1-cxx-debug
+export PETSC_ARCH = darwin8.8.1-cxx-opt
+export PETSC_DIR = ${MESHOPT_HOME}/ext/petsc-2.3
+include ${PETSC_DIR}/bmake/common/variables
+
+export TAO_DIR = ${MESHOPT_HOME}/ext/tao-1.8
+include ${TAO_DIR}/bmake/tao_common_variables
+
+# say where to find OpenMesh headers and libs
+OPENMESH_INCLUDE = -I${MESHOPT_HOME}/ext
+#OPENMESH_LIB = -L${MESHOPT_HOME}/ext/OpenMesh/Core/Darwin_gcc_dbg  -lOpenMesh_Core
+OPENMESH_LIB = -L${MESHOPT_HOME}/ext/OpenMesh/Core/Darwin_gcc_opt  -lOpenMesh_Core
+
+# where to find the ADT header files
+ADT_INCLUDE = -I${MESHOPT_HOME}/ext
+
+# where to find BLAS/LAPACK header files
+BLASLAPACK_INCLUDE = -I/System/Library/Frameworks/vecLib.framework/Headers
+
+# PARDISO_LIB = 
+
+WARNINGFLAGS = -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare
+USER_CXXFLAGS = ${WARNINGFLAGS}
+#export USER_CXXFLAGS = ${OPENMESHFLAGS}
+
+# GL_INCLUDE =  -I/usr/X11R6/include/
+# GL_LIB = -lglut32 -lglu32  -lopengl32
+#GL_INCLUDE = -I${MESHOPT_HOME}/src/new_viewer/glew
+#GL_LIB = -L${MESHOPT_HOME}/src/new_viewer/glew -lglew -L"/System/Library/Frameworks/GLUT.framework" -framework GLUT -framework OpenGL
+#GL_LIB = -L"/System/Library/Frameworks/GLUT.framework" -framework GLUT -framework OpenGL -framework AppKit ## AppKit needed for an OSX-specific platform hack
+#GLUI_INC = -I${MESHOPT_HOME}/ext/glui-2.35/src/include/GL
+#GLUI_LIB = -L${MESHOPT_HOME}/ext/glui-2.35/src/lib -lglui
+
+#PYTHON_INC = -I${MESHOPT_HOME}/ext/python_shim
+#PYTHON_LIB = ${MESHOPT_HOME}/ext/python_shim/libshim.a #-framework Python
+#PYTHON_LIB = ${MESHOPT_HOME}/ext/python_shim/libshim.a /sw/lib/python2.5/config/libpython2.5.dylib
+
+#MATPACK_INC = -I${MESHOPT_HOME}/ext/matpack-10.4
+#MATPACK_LIB = ${MESHOPT_HOME}/ext/matpack-10.4/matpack/matpack.a
+
+#TAUCS_INCLUDE = -I${MESHOPT_HOME}/ext/taucs/src -I${MESHOPT_HOME}/ext/taucs/build/darwin -I${MESHOPT_HOME}/ext/taucs/external/src -DMACHTYPE_
+#TAUCS_LIB = -L${MESHOPT_HOME}/ext/taucs/lib/darwin -ltaucs /Users/yotam/Work/taucs/taucs-mkg/taucs/external/lib/darwin/libmetis.a
+#-L{MESHOPT_HOME}/ext/taucs/external/lib/darwin -lmetis
+
+# include this in your compilation 
+EXT_DIR = ${MESHOPT_HOME}/ext
+UMFPACK_INCLUDE=-I${EXT_DIR}/AMD/Include -I${EXT_DIR}/UMFPACK/Include -I${EXT_DIR}/UFconfig
+# include this in your linking
+UMFPACK_LIB=${EXT_DIR}/UMFPACK/Lib/libumfpack.a ${EXT_DIR}/AMD/Lib/libamd.a
+
+HIORDER_LIB = -L${MESHOPT_HOME} -lhiorder
+
+USER_CXXFLAGS += -mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.4u.sdk
+#USER_CXXFLAGS += ${PYTHON_INC} ${MATPACK_INC} ${TAUCS_INCLUDE} ${UMFPACK_INCLUDE}
+USER_CXXFLAGS += ${TAUCS_INCLUDE} ${UMFPACK_INCLUDE}
+USER_LDFLAGS += -mmacosx-version-min=10.4 -Wl,-syslibroot,/Developer/SDKs/MacOSX10.4u.sdk
+#USER_LDFLAGS += ${PYTHON_LIB} ${MATPACK_LIB} -lXpm -lX11 ${TAUCS_LIB} ${UMFPACK_LIB}
+USER_LDFLAGS += ${HIORDER_LIB} -lXpm -lX11 ${TAUCS_LIB} ${UMFPACK_LIB}
+## fix for leopard bug
+#USER_LDFLAGS += "-Wl,-dylib_file,/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib:/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib"
+
+#PNG_INCLUDE = -I/sw/include
+#PNG_LIB = -L/sw/lib -lpng
+
+#BOOST_INCLUDE = -I/sw/include/boost
+#BOOST_LIB = /sw/lib/libboost_thread-mt.a /sw/lib/libboost_filesystem-mt.a
+
+#OPTIONAL_DIRECTIVES := -DHAVE_PNG -DTIMING_ON -DHAVE_GLUI -DHAVE_MATPACK #-DHAVE_TAUCS #-DHAVE_PYTHON
+OPTIONAL_DIRECTIVES := -DHAVE_PNG -DTIMING_ON -DHAVE_MATPACK #-DHAVE_TAUCS #-DHAVE_PYTHON
+OPTIONAL_DIRECTIVES := -DHAVE_PNG -DTIMING_ON -DHAVE_MATPACK -DHAVE_UMFPACK
+
+## This pulls in tablet pressure support
+#PLATFORM_HACKS = macosx

@@ -1,0 +1,31 @@
+Author: Yotam Gingold <yotam@yotamgingold.com>, except the third-party software listed below.
+Homepage: http://cs.gmu.edu/~ygingold/annotations/
+
+Any copyright is dedicated to the Public Domain.
+http://creativecommons.org/publicdomain/zero/1.0/
+
+This software is provided "as is", without warranty of any kind, express or
+implied.
+
+---
+
+The following third-party software is included in this distribution.
+See the "CREDITS" directory for individual licenses.
+    Python      http://python.org/
+    wxPython    http://wxpython.org/
+    wxWidgets   http://www.wxwidgets.org/
+    PyOpenGL    http://pyopengl.sourceforge.net/
+    Cython      http://cython.org/
+    autodiff.h  http://www.mitsuba-renderer.org/misc.html
+    NumPy       http://www.numpy.org/
+    SciPy       http://www.scipy.org/
+    PIL         http://www.pythonware.com/products/pil/
+    Eigen       http://eigen.tuxfamily.org/
+    PyFTGL      https://code.google.com/p/pyftgl/
+    FTGL        http://sourceforge.net/projects/ftgl/
+    FreeType    http://www.freetype.org/
+    pnpoly.c    http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
+    raytri.c    Tomas Moller
+    tritri.c    Tomas Moller
+    py2app      http://pythonhosted.org/py2app/
+    OpenSans    https://fonts.google.com/specimen/Open+Sans
