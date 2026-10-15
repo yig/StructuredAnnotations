@@ -51,9 +51,10 @@ There are some system library dependencies, some Python dependencies, and some C
 
 ### Python dependencies
 
-To install the Python dependencies, either use the `Pipfile` by running `pipenv install` or use `pip3 install -r requirements.txt`.
+To install the Python dependencies, either use the `Pipfile` by running `pipenv install` or use `pip install -r requirements.lock.txt`.
 To avoid the `PYTHONHOME` workaround mentioned above,
 run `python3 -m venv .venv` before `pipenv install`.
+If using `pip install` directly, you probably also want to create the virtual environment and activate it, too (`source .venv/bin/activate.{$SHELL}`).
 
 ### Compiled code
 
@@ -65,7 +66,7 @@ To compile the compiled code:
 
     cc tritri.c tritri_wrapper.cpp raytri.c raytri_wrapper.cpp -lstdc++ -fkeep-inline-functions -dynamiclib -o libtritri.dylib -g -O3 -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare
 
-    c++ Eline_ad.mitsuba.cpp -dynamiclib -o Eline_ad.dylib -g -O3 -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare -Iext -Iext/mitsuba -I/usr/local/include/eigen3
+    c++ Eline_ad.mitsuba.cpp -dynamiclib -o Eline_ad.dylib -g -O3 -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare -Iext -Iext/mitsuba -I/opt/homebrew/include/eigen3
 
     c++ edge_distances.cpp -dynamiclib -o edge_distances.dylib -g -O3 -Wall -Wshadow -Woverloaded-virtual -Winit-self -Wno-sign-compare
 
